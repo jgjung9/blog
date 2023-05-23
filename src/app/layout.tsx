@@ -1,6 +1,6 @@
-import Link from 'next/link';
 import './globals.css';
 import { Inter } from 'next/font/google';
+import Header from '@/components/Header';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -17,15 +17,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={inter.className + 'w-full'}>
-        <header>
-          <h1>Gio's Blog</h1>
-          <nav>
-            <Link href='/'>home</Link>
-            <Link href='/about'>about</Link>
-            <Link href='/posts'>posts</Link>
-            <Link href='/contact'>contact</Link>
-          </nav>
-        </header>
+        <Header />
         {children}
         <footer>Blog | All right reserved.</footer>
       </body>
